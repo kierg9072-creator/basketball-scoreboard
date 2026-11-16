@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basketball Scoreboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scoreboard">
+    <!-- Timer at Quarter -->
+    <div class="top-section">
+      <div class="quarter-box">
+        <h3>QUARTER</h3>
+        <span id="quarter">1</span>
+        <button onclick="nextQuarter()">Next Qtr</button>
+      </div>
+      <div class="timer-box">
+        <h1 id="timer">10:00</h1>
+        <button onclick="startTimer()">Start</button>
+        <button onclick="pauseTimer()">Pause</button>
+        <button onclick="resetTimer()">Reset</button>
+      </div>
+    </div>
+
+    <!-- Home at Guest Teams -->
+    <div class="teams-section">
+      <div class="team">
+        <input type="text" id = "team1"></input>
+        <div class="score" id="home-score">0</div>
+        <div class="buttons">
+          <button onclick="addScore('home', 1)">+1</button>
+          <button onclick="addScore('home', 2)">+2</button>
+          <button onclick="addScore('home', 3)">+3</button>
+          <button onclick="addScore('home', -1)">-1</button>
+        </div>
+        <!-- <p>Fouls: <span id="home-fouls">0</span> <button onclick="addFoul('home')">+Foul</button></p> -->
+      </div>
+
+      <div class="team">
+        <input type="text" id = "team1"></input>
+        <div class="score" id="guest-score">0</div>
+        <div class="buttons">
+          <button onclick="addScore('guest', 1)">+1</button>
+          <button onclick="addScore('guest', 2)">+2</button>
+          <button onclick="addScore('guest', 3)">+3</button>
+          <button onclick="addScore('guest', -1)">-1</button>
+        </div>
+        <!-- <p>Fouls: <span id="guest-fouls">0</span> <button onclick="addFoul('guest')">+Foul</button></p> -->
+      </div>
+    </div>
+
+    <button class="reset-all" onclick="resetGame()">New Game</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
